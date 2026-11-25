@@ -71,6 +71,7 @@ GDD
 	Efectos Visuales (VFX):
     •	Sistema simple de partículas en C++: La pelota deja una estela brillante a su paso y los bloques destruidos liberan pequeños chispazos/píxeles de neón.
 
+
 6.	Progreso y Diseño de Niveles
 
 •	Nivel 1 – Core Initialization:
@@ -79,3 +80,13 @@ GDD
   o	Introducción de bloques blindados e indestructibles en el centro creando canales de rebote.
 •	Nivel 3 – Overload:
   o	Mezcla de bloques explosivos y un patrón dinámico donde la velocidad de la pelota aumenta progresivamente.
+
+
+Tipos de bloques con sus códigos:
+
+0: Espacio Vacío. No genera ningún bloque en esa posición de la cuadrícula.
+1: Bloque Indestructible. Funciona como un obstáculo permanente que no se puede destruir. La pelota simplemente rebota en él para desviar su trayectoria. (Color: Gris / Plata metálico).
+2: Bloque Estándar: Requiere 1 solo impacto para destruirse. (Color: Cian Neón #00F0FF).
+3: Bloque Blindado Ligero: Requiere 2 impactos para destruirse. Al recibir el primer golpe cambia/atenúa su intensidad de color neón. (Color: Amarillo Neón).
+4: Bloque Blindado Pesado: Requiere 3 impactos para destruirse. Pierde brillo gradualmente con cada golpe. (Color: Naranja / Rojo Neón).
+5: Bloque Explosivo: Se destruye de 1 golpe, pero al romperse genera una onda expansiva que daña o destruye los bloques adyacentes y desencadena reacciones en cadena si hay otros bloques explosivos cerca. (Color: Magenta Neón #FF007F).
